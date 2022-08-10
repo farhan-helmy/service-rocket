@@ -2,6 +2,8 @@
 
 - upload service
 
+### Story 2 and 3 in progress
+
 
 ## Challenges
 
