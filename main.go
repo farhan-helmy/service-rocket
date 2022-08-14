@@ -18,7 +18,9 @@ func setupRoutes(app *fiber.App) {
 }
 func main() {
 	app := fiber.New()
-
+	//width, height := utils.GetImageDimension("jpegtest.jpeg")
+	//utils.DecodeImage("jpegtest.jpeg")
+	//fmt.Println("Width:", width, "Height:", height)
 	setupRoutes(app)
 
 	log.Fatal(app.Listen(":3001"))
