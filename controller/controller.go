@@ -13,8 +13,8 @@ type response struct {
 }
 
 type responseurl struct {
-	Message string `json:"message"`
-	Url     string `json:"url"`
+	Message string   `json:"message"`
+	Url     []string `json:"url"`
 }
 
 type ResponseUrlMultiple struct {
@@ -46,7 +46,7 @@ func isZip(fileType string) bool {
 
 func UploadImage(c *fiber.Ctx) error {
 	var file_type string
-	var url string
+	var url []string
 	message := response{"Unsupported file"}
 	messageSuccess := response{"image uploaded"}
 	form, err := c.MultipartForm()
@@ -67,7 +67,7 @@ func UploadImage(c *fiber.Ctx) error {
 
 		//url = utils.UploadToS3(image.Filename)
 
-		utils.GetImageDimension(image.Filename)
+		url = utils.GetImageDimension(image.Filename)
 
 		if err != nil {
 			return c.Status(400).JSON(&message)
@@ -75,7 +75,7 @@ func UploadImage(c *fiber.Ctx) error {
 
 	}
 
-	//defer utils.ClearFolder()
+	defer utils.ClearFolder()
 
 	return c.Status(200).JSON(&responseurl{Message: "Upload Successful!", Url: url})
 }
