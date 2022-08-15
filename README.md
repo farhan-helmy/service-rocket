@@ -6,16 +6,16 @@ go mod tidy
 ```
 ## TODOS
 
-- upload service [x]
-- unzip file [x]
-- upload multiple image [x]
-- check if zip file -> go to unzip function [x]
-- check if unzipped file png or jpeg? send to function that generate .png extension or .jpeg [x]
-- resize image [x]
-- generate two type of resized image [x]
-- clear folder after upload to S3 [x]
-- connect to s3 account [x]
-- AWS SDK to upload data to S3 [x]
+- [x] upload service 
+- [x] unzip file 
+- [x] upload multiple image 
+- [x] check if zip file -> go to unzip function 
+- [x] check if unzipped file png or jpeg? send to function that generate .png extension or .jpeg 
+- [x] resize image 
+- [x] generate two type of resized image 
+- [x] clear folder after upload to S3 
+- [x] connect to s3 account 
+- [x] AWS SDK to upload data to S3 
 
 
 ## Challenges
