@@ -1,4 +1,12 @@
 
+## Pre requisites 
+
+> Before running the app, make sure that you have aws cli installed [Here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+> Create 1 IAM user that have permission S3fullAccess
+
+> type aws configure on your local machine and put the access key and secret key of the IAM user that you have just created
+
 ## Step by step
 
 ```shell
