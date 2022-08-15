@@ -1,6 +1,9 @@
 
 ## Step by step
 
+```shell
+git clone git@github.com:farhan-helmy/service-rocket.git
+```
 ```go 
 go mod tidy
 ```
