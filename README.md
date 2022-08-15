@@ -3,9 +3,33 @@
 
 ```shell
 git clone git@github.com:farhan-helmy/service-rocket.git
+
+cd service-rocket
 ```
 ```go 
 go mod tidy
+go run main.go
+```
+2 endpoints will be generated 
+localhost:3001/api/v1/image/multiple-upload
+localhost:3001/api/v1/image/upload
+
+For me I use insomnia to test the end point 
+
+Testing using CURL
+
+```shell
+curl --request POST \
+  --url http://localhost:3001/api/v1/image/multiple-upload \
+  --header 'Content-Type: multipart/form-data' \
+  --header 'content-type: multipart/form-data; boundary=---011000010111000001101001' \
+  --form 'file="filepath to zip file"'
+
+  curl --request POST \
+  --url http://localhost:3001/api/v1/image/upload \
+  --header 'Content-Type: multipart/form-data' \
+  --header 'content-type: multipart/form-data; boundary=---011000010111000001101001' \
+  --form image=@/Users/farhanhelmy/Downloads/download.png
 ```
 ## TODOS
 
