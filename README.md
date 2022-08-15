@@ -27,7 +27,7 @@ curl --request POST \
   --header 'content-type: multipart/form-data; boundary=---011000010111000001101001' \
   --form 'file="filepath to zip file"'
 
-#Endpoint for upload zip file
+#Endpoint for upload single image
   curl --request POST \
   --url http://localhost:3001/api/v1/image/upload \
   --header 'Content-Type: multipart/form-data' \
